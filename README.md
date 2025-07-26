@@ -31,3 +31,7 @@
     ...............no-unused-vers.................
 
 npx eslint diye
+
+
+ata diye defaul error show kora hoy
+npm i http-status-codes
