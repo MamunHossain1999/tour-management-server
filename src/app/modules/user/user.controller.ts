@@ -15,7 +15,6 @@ const creatreUser = async (req: Request, res: Response) => {
         user
     });
   } catch (err: any) {
-    console.log(err);
     res.status(httpStatus.BAD_REQUEST).json({
       message: `Something Went Wrong ${err.message}`,
       err,
