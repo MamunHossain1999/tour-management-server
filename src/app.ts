@@ -1,6 +1,8 @@
 import express, { Request, Response } from "express";
 import { UserRoutes } from "./app/modules/user/user.route";
 import cors from "cors";
+import { globalErrorHandler } from "./middleware/globalErrorHandler";
+import { notFoundHandler } from "./middleware/notFoundHandler";
 
 
 
@@ -16,5 +18,6 @@ app.get("/", (req: Request, res: Response) => {
     message: "Welcome to tour management system server",
   });
 });
-
+app.use(notFoundHandler)
+app.use(globalErrorHandler);
 export default app;
